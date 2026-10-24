@@ -1,3 +1,5 @@
+// 
+
 class Solution {
     public int[] evenOddBit(int n) {
         int even = 0;
@@ -5,7 +7,7 @@ class Solution {
         int idx = 0;
 
         while (n > 0) {
-            if (n % 2 == 1) {
+            if ((n & 1) == 1) {
                 if(idx % 2 == 0){
                     even++;
                 }else{
@@ -13,7 +15,7 @@ class Solution {
                 }
             }
 
-            n = n / 2;
+            n >>= 1;
             idx++;
         }
 
